@@ -21,8 +21,11 @@ class IdeasController < ApplicationController
   end
 
   def create
+
     @idea = Idea.new(params[:idea])
+    debugger
     @idea.save
+
     respond_with(@idea)
   end
 
